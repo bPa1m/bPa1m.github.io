@@ -1,0 +1,14 @@
+<section id="projects" class="section">
+  <div class="container">
+    <h2 class="title has-text-centered">Projects</h2>
+    <div class="columns is-multiline is-variable is-3 is-centered">
+      {% for project in site.projects %}
+        <div class="column is-4-desktop is-6-tablet is-12-mobile">
+          <div class="card-wrapper">
+            {% include project-card.html project=project %}
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>

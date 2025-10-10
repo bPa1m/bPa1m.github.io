@@ -1,0 +1,13 @@
+<div class="card">
+  <div class="card-image">
+    <figure class="image is-4by3">
+      <a href="{{ project.url }}">
+        <img src="{{ project.image }}" alt="{{ project.title }}">
+      </a>
+    </figure>
+  </div>
+  <div class="card-content has-text-centered">
+    <h3 class="title is-5">{{ project.title }}</h3>
+    <p>{{ project.description | truncate: 150 }}</p>
+  </div>
+</div>

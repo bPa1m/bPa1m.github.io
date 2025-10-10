@@ -1,0 +1,138 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://cdn.jsdelivr.net/npm/bulma@0.8.2/css/bulma.min.css');
+
+$color-primary: #ff6600       !default;   // links, buttons
+$color-secondary: #00ccff     !default;   // hover highlights
+$color-background: #f0f0f0    !default;   // page background
+$color-text: #1a1a1a          !default;   // normal text
+$color-card-bg: #ebebeb       !default;   // cards
+$color-card-text: #1a1a1a     !default;   // card text
+$color-heading: #222222       !default;   // headings
+$color-footer-bg: #111111     !default;   // footer background
+$color-footer-text: #ffffff   !default;   // footer text
+
+html,
+body {
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth !important;
+    transition: all 0.25s ease;
+    background-color: $color-background;
+    color: $color-text;
+}
+
+
+
+/* width */
+::-webkit-scrollbar {
+    width: 0.5vmax !important;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: white !important;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #363636 !important;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: black !important;
+}
+
+::placeholder {
+    font-family: 'Poppins', sans-serif;
+}
+
+#navbar {
+    .navbar-burger {
+        span:nth-child(2) {
+            left: calc(50%);
+            width: 8px;
+        }
+    }
+}
+
+.is-active {
+    font-weight: bold;
+}
+
+.columns {
+    .button {
+        margin: 0.5rem !important;
+    }
+}
+
+hr {
+    margin: 1rem auto;
+    height: 1px;
+}
+
+.column {
+    margin: 0;
+    padding: 0.5rem;
+}
+
+.searchResult {
+    a {
+        .title {
+            text-decoration: underline;
+        }
+    }
+}
+
+/* Custom card styles */
+.card {
+    background-color: #ebebeb;   /* light gray background */
+    color: #1a1a1a;              /* dark text */
+    border-radius: 12px;         /* rounded corners */
+    overflow: hidden;            /* make sure images don’t overflow */
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+    &:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    }
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.hero-video-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 1;
+
+    #hero-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    }
+
+    .hero-video-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5); // adjust for darker/lighter overlay
+        z-index: 2;
+    }
+}
+
+.hero-body {
+    position: relative;
+    z-index: 3; // text stays above overlay
+}
+
+
