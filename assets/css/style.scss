@@ -73,6 +73,9 @@ a.navbar-item.is-active {
         min-width: 25vmax;
         margin: 0.5rem;
     }
+    .hero-body {
+        background: #F1F1F1;
+    }
 }
 
 #contact {
@@ -277,6 +280,10 @@ a.navbar-item.is-active {
         &:hover {
             background-color: rgba($color: #000000, $alpha: 0.90)!important;
         }
+    }
+    .project-post {
+        max-width: 800px;
+        margin: 0 auto;
     }
 }
 

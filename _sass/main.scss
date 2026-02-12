@@ -4,7 +4,7 @@
 
 $color-primary: #ff6600       !default;   // links, buttons
 $color-secondary: #00ccff     !default;   // hover highlights
-$color-background: #f0f0f0    !default;   // page background
+$color-background: #f7f7f7    !default;   // page background
 $color-text: #1a1a1a          !default;   // normal text
 $color-card-bg: #ebebeb       !default;   // cards
 $color-card-text: #1a1a1a     !default;   // card text
@@ -135,4 +135,8 @@ hr {
     z-index: 3; // text stays above overlay
 }
 
+.box {
+    border: 4px solid #333;
+    border-radius: 8px;
+}
 

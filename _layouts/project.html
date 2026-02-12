@@ -5,12 +5,32 @@ layout: compress
 <!DOCTYPE html>
 <html>
 {% include head.html %}
-<body>
+<body class="has-navbar-fixed-top">
   {% include navbar.html %}
 
 
 
   <!-- Project Hero -->
+<section class="hero is-large has-text-centered" id="hero">
+
+  {% if page.video %}
+  <div class="hero-video-wrapper">
+    <video autoplay muted loop playsinline id="hero-video" poster="{{ page.image }}">
+      <source src="{{ page.video }}" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <div class="hero-video-overlay"></div>
+  </div>
+    <div class="hero-body">
+    <div class="container">
+      <h1 class="title has-text-white is-size-1 is-uppercase has-text-weight-bold">
+        {{ page.title }}
+      </h1>
+      <hr>
+    </div>
+  </div>
+</section>
+  {% elsif page.image %}
   <section class="hero is-large is-bold"
          style="background: url('{{ page.image }}') center/cover no-repeat;">
   <div class="hero-body">
@@ -18,13 +38,17 @@ layout: compress
     </div>
   </div>
 </section>
+  {% endif %}
+
 
   <!-- Project Content -->
   <section class="section">
-    <div class="container content">
-      {{ content }}  <!-- Any additional project info goes here -->
+  <div class="container">
+        <div class="box content project-post">
+          {{ content }}
     </div>
-  </section>
+  </div>
+</section>
 
   {% include footer.html %}
 </body>
