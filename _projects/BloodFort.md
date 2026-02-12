@@ -2,7 +2,7 @@
 layout: project
 title: ""
 image: /assets/images/BloodFort4_3.png
-description: "Coming Soon"
+description: "BloodFort - Coming Soon"
 permalink: /projects/BloodFort/
 ---
 # BloodFort
